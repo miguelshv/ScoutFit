@@ -1,0 +1,11 @@
+{
+  "project_id": "appgprj_6ae9f4c065b88191a716a0f5825a2c07",
+  "version_id": "appgprj_6ae9f4c065b88191a716a0f5825a2c07~appgver_c78101c490748191a1ae0a5f8fdf1b48",
+  "version_number": 2,
+  "deployment_id": "appgdep_6aea021b77088191b94d048da5ed0e2b",
+  "source_commit_sha": "a487e154ccc3057fc0da0280852abc135add50c3",
+  "url": "https://scoutfit-laliga-demo.berry-clock-7103.chatgpt.site",
+  "audience": "public",
+  "snapshot": "20261103T144404526587Z",
+  "published_at": "2026-11-03T15:47:49.952799+00:00"
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ScoutFit · Ficha de $player_name</title>
+<style>
+:root{--ink:#282d27;--muted:#62665d;--line:#d2cec2;--red:#ac4b32;--green:#345548}
+*{box-sizing:border-box}body{margin:36px auto;max-width:1040px;padding:0 28px 40px;
+background:#f4f0e7;color:var(--ink);font:14px/1.7 'Segoe UI',Arial,sans-serif}
+h1,h2,h3{font-family:Georgia,serif;font-weight:400;line-height:1.2}h1{font-size:46px;margin:12px 0}
+h2{font-size:27px;margin:0 0 16px}h3{font-size:23px;margin:8px 0 20px}h4{font-size:12px;margin:15px 0 6px}
+header{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:3px solid var(--ink);
+border-bottom:1px solid var(--line);padding:14px 0}.brand{font:27px Georgia,serif}.index{font:10px/1.7 'Courier New',monospace;
+letter-spacing:.08em;color:var(--red);text-transform:uppercase}.lead{padding:24px 0 20px;border-bottom:1px solid var(--ink)}
+.caption{color:var(--muted);font-size:11px;line-height:1.8}section{padding:25px 0;border-bottom:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;font-size:11px;color:var(--muted)}
+.facts strong{display:block;color:var(--ink);font-size:15px;font-weight:500;margin-top:4px}
+.verdict{border-left:3px solid var(--red);padding:4px 0 4px 18px}.verdict strong{font:27px Georgia,serif}
+.prose{white-space:pre-wrap;overflow-wrap:anywhere;margin:5px 0 13px}.notice{background:#eae5d9;padding:15px}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:20px}th,td{text-align:left;padding:10px 12px;
+border-bottom:1px solid var(--line)}thead{background:#eae5d9}tbody th{font-weight:400}td:nth-child(2){font-variant-numeric:tabular-nums}
+.percentile{min-width:160px}.track{display:inline-block;vertical-align:middle;width:80px;height:4px;background:#d8d9cb;margin-right:12px}
+.track i{display:block;height:100%;background:var(--green)}article{padding:20px 0;border-top:1px dashed var(--line)}
+.two-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px}a{color:var(--green)}footer{padding-top:22px;font-size:11px;color:var(--muted)}
+@media(max-width:650px){body{padding:0 16px}h1{font-size:34px}header{align-items:flex-start;flex-direction:column;gap:4px}
+.facts,.two-columns{grid-template-columns:1fr;gap:8px}th,td{padding:8px 5px}.track{width:42px}.percentile{min-width:100px}}
+@media print{body{background:white;margin:0;padding:0;font-size:10pt;max-width:none}h1{font-size:30pt}
+thead{display:table-header-group}article,.verdict,.facts,tr{break-inside:avoid}a{color:inherit}section{padding:18px 0}}
+</style></head><body>
+<header><span class="brand">ScoutFit</span><span class="index">Cuaderno de scouting / Ficha individual</span></header>
+<div class="lead"><p class="index">$project_name</p><h1>$player_name</h1>
+<p>Equipo al guardar: $team_at_save · Seguimiento: $status</p>
+<p class="caption">Ficha generada: $generated_at</p></div>
+<section><p class="index">01 / Criterio del observador</p><h2>Conclusión personal</h2>
+<div class="verdict"><strong>$verdict</strong>$rationale
+<p>$signature</p><p class="caption">$assessment_date</p></div></section>
+<section><p class="index">02 / Datos de la consulta</p><h2>Perfil estadístico</h2>$statistics</section>
+<section><p class="index">03 / Cuaderno de campo</p><h2>Observaciones registradas ($observation_count)</h2>$observations</section>
+<section><h2>Nota general del proyecto</h2>$general_note</section>
+<footer><p>La conclusión y las observaciones son aportaciones humanas, independientes de los cálculos estadísticos.
+Los perfiles de estilo se infieren con reglas; no son posiciones tácticas confirmadas. Los datos son agregados de temporada,
+sin ajuste por posesión o dificultad del rival; pueden incluir minutos de otro club. Esta ficha no predice el éxito de un fichaje.</p>
+<p>Identidad del seguimiento: $player_key<br>Consulta al guardar: $saved_snapshot
+<br>Consulta de las estadísticas: $statistics_snapshot</p></footer></body></html>
